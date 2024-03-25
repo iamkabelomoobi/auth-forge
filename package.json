@@ -1,0 +1,40 @@
+{
+    "name": "@the-berufegoru/auth-forge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon src/server.js",
+        "start": "node src/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/the-berufegoru/auth-forge.git"
+    },
+    "keywords": [
+        "expressjs",
+        "nodejs",
+        "auth",
+        "api"
+    ],
+    "author": "The Berufegoru",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/the-berufegoru/auth-forge/issues"
+    },
+    "homepage": "https://github.com/the-berufegoru/auth-forge#readme",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "compression": "^1.7.4",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "helmet": "^7.1.0",
+        "ip": "^1.1.8",
+        "winston": "^3.10.0"
+    },
+    "devDependencies": {
+        "@logtail/node": "^0.4.12",
+        "@logtail/winston": "^0.4.12"
+    }
+}
