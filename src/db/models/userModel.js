@@ -17,6 +17,7 @@ const User = Database.sequelizeConnect().define(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     /**
      * The password of the user.
@@ -27,24 +28,14 @@ const User = Database.sequelizeConnect().define(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    /**
-     * The role of the user.
-     *
-     * @type {string}
-     */
-    role: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    /**
-     * The verification status of the user.
-     *
-     * @type {string}
-     */
-    isVerified: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+  },
+  {
+    indexs: [
+      {
+        unique: true,
+        fields: ["username"],
+      },
+    ],
   },
   {
     timestamps: true,
