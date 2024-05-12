@@ -12,13 +12,24 @@ dotenv.config();
 /**
  * Load environment variables.
  */
-const { LOGTAIL_ACCESS_TOKEN } = process.env;
+const {
+  LOGTAIL_ACCESS_TOKEN,
+  MYSQL_USERNAME,
+  MYSQL_PASSWORD,
+  MYSQL_DATABASE,
+  MYSQL_HOST,
+} = process.env;
 
-console.log(LOGTAIL_ACCESS_TOKEN);
 /**
  * Configuration object for the application.
  */
 const config = {
+  database: {
+    username: MYSQL_USERNAME,
+    password: MYSQL_PASSWORD,
+    databaseName: MYSQL_DATABASE,
+    host: MYSQL_HOST,
+  },
   logger: {
     transports: {
       development: new winston.transports.Console({
